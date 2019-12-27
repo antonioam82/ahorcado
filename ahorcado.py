@@ -10,6 +10,9 @@ juegoFrame.pack()
 Label(juegoFrame, text = "Introduce una letra", font = ("Verdana",24)
       ).grid(row = 0, column = 0, padx = 10, pady = 10)
 
-letra = Entry(juegoFrame, width = 1, font = ("Verdana", 24)
+letra = Entry(juegoFrame, width = 2, font = ("Verdana", 24)
               ).grid(row = 0, column = 1, padx = 10, pady = 10)
+
+probar_letra = Button(juegoFrame,text="Probar",bg="orange"
+                      ).grid(row = 1, column = 0, pady = 10)
 raiz.mainloop()
