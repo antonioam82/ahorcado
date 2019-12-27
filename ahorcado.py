@@ -1,7 +1,10 @@
 from tkinter import *
 
+letrasUsadas = []
+
 def probar_letra_funcion():
-    print(letraObtenida.get())
+    letrasUsadas.append(letraObtenida.get())
+    #print(letrasUsadas)
 
 raiz = Tk()
 letraObtenida = StringVar()
