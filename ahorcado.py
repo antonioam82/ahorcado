@@ -7,6 +7,11 @@ letrasUsadas = []
 vidas = 7
 letrasacertadas = 0
 
+def horca():
+    if vidas == 6:
+        canvas = Canvas(raiz, width=300, height=360)
+        canvas.place(x=655,y=100)
+
 def colocarLetras():
     x=50
     y=150
@@ -38,6 +43,7 @@ def probar_letra_funcion():
             showwarning(title="Victoria",message="Has ganado")
     else:
         vidas-=1
+        horca()
         if vidas == 0:
             showwarning(title="Derrota",message="Juego terminado")
     #print(letrasUsadas)
@@ -68,5 +74,6 @@ inicialx=200
 for i in range(len(palabra)):
     guiones[i].place(x=inicialx,y=400)
     inicialx+=50
+
     
 raiz.mainloop()
