@@ -10,6 +10,9 @@ letrasacertadas = 0
 def horca():
     canvas = Canvas(raiz, width=300, height=360)
     canvas.place(x=655,y=100)
+    canvas.create_line(0,350,300,350)
+    canvas.create_line(300,0,300,350)
+    canvas.create_line(300,10,100,0)
         
 
 def colocarLetras():
