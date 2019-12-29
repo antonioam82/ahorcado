@@ -12,7 +12,8 @@ def horca():
     canvas.place(x=655,y=100)
     canvas.create_line(0,350,300,350)
     canvas.create_line(300,0,300,350)
-    canvas.create_line(300,10,100,0)
+    canvas.create_line(300,30,100,10)
+    canvas.create_line(100,0,100,80)
         
 
 def colocarLetras():
@@ -80,3 +81,4 @@ for i in range(len(palabra)):
 
 horca()    
 raiz.mainloop()
+
