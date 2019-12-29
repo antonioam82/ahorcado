@@ -8,9 +8,9 @@ vidas = 7
 letrasacertadas = 0
 
 def horca():
-    if vidas == 6:
-        canvas = Canvas(raiz, width=300, height=360)
-        canvas.place(x=655,y=100)
+    canvas = Canvas(raiz, width=300, height=360)
+    canvas.place(x=655,y=100)
+        
 
 def colocarLetras():
     x=50
@@ -75,5 +75,5 @@ for i in range(len(palabra)):
     guiones[i].place(x=inicialx,y=400)
     inicialx+=50
 
-    
+horca()    
 raiz.mainloop()
