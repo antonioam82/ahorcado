@@ -4,7 +4,7 @@ from tkinter.messagebox import *
 
 letrasUsadas = []
 
-vidas = 8
+vidas = 7
 letrasacertadas = 0
 
 def horca():
@@ -16,16 +16,21 @@ def horca():
     canvas.create_line(300,30,100,10)
 
 def horca_avan(v):
-    if v == 7:
+    if v == 6:
         canvas.create_line(100,0,100,80)
-    elif v == 6:
-        canvas.create_oval(139,80,59,160)
     elif v == 5:
-        canvas.create_line(100,160,100,230)
+        canvas.create_oval(139,80,59,160)
     elif v == 4:
-        canvas.create_line(100,210,130,170)
+        canvas.create_line(100,160,100,230)
     elif v == 3:
+        canvas.create_line(100,210,130,170)
+    elif v == 2:
         canvas.create_line(100,210,60,195)
+    elif v == 1:
+        canvas.create_line(100,230,40,280)
+    elif v == 0:
+        canvas.create_line(100,230,100,280)
+        
         
 
 def colocarLetras():
