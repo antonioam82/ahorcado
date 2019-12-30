@@ -4,16 +4,28 @@ from tkinter.messagebox import *
 
 letrasUsadas = []
 
-vidas = 7
+vidas = 8
 letrasacertadas = 0
 
 def horca():
+    global canvas
     canvas = Canvas(raiz, width=300, height=360)
     canvas.place(x=655,y=100)
     canvas.create_line(0,350,300,350)
     canvas.create_line(300,0,300,350)
     canvas.create_line(300,30,100,10)
-    canvas.create_line(100,0,100,80)
+
+def horca_avan(v):
+    if v == 7:
+        canvas.create_line(100,0,100,80)
+    elif v == 6:
+        canvas.create_oval(139,80,59,160)
+    elif v == 5:
+        canvas.create_line(100,160,100,230)
+    elif v == 4:
+        canvas.create_line(100,210,130,170)
+    elif v == 3:
+        canvas.create_line(100,210,60,195)
         
 
 def colocarLetras():
@@ -47,7 +59,7 @@ def probar_letra_funcion():
             showwarning(title="Victoria",message="Has ganado")
     else:
         vidas-=1
-        horca()
+        horca_avan(vidas)
         if vidas == 0:
             showwarning(title="Derrota",message="Juego terminado")
     #print(letrasUsadas)
@@ -81,4 +93,3 @@ for i in range(len(palabra)):
 
 horca()    
 raiz.mainloop()
-
